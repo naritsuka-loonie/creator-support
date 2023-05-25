@@ -1,0 +1,59 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+table {
+  border-collapse: collapse;
+}
+ th {
+  background: #ccc;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background: #efefef;
+}
+
+tr:hover {
+  background: #d1d1d1;
+}
+
+.searchBox{
+  width: 300px;
+  height: 250px;
+}
+
+.ch_box{
+  width: 1280px;
+}
+
+.ch_title{
+  width: 300px;
+}
+
+.ch_url{
+  width: 600px;
+}
+
+.ch_view{
+  width: 150px;
+}
+
+.ch_like{
+  width: 150px;
+}
+
+.ch_detail{
+  width: 80px;
+}
+
+

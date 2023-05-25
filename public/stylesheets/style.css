@@ -1,0 +1,119 @@
+body {
+  margin: 50px;
+  width: 1280px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+li {
+    background-color: #ffffff;
+    list-style-type: none;
+    border: solid #e67e22 3px;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.link {
+    height: 80px;
+    width: 120px;
+    background-color: #a2f5bf;
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+.mainArea {
+    display: flex;
+    background-color: #ffffff;
+}
+
+.youtubeArea{
+  margin: 50px;
+  display: flex;
+  width: 640px;
+}
+
+.listArea {
+    background-color: #f5f5f5;
+    margin: 10px;
+}
+
+.searchArea {
+    background-color: #f5f5f5;
+    margin: 10px;
+}
+
+.csvArea{
+    margin-top:300px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+
+table {
+    border-collapse: collapse;
+}
+.my_table{
+    padding-left: 10px;
+}
+
+.advertArea{  
+  margin: 50px;
+  display: flex;
+}
+
+.advert1{
+  margin: 50px;
+  display: flex;
+  width: 640px;
+}
+.advert2{
+  margin: 50px;
+  display: flex;
+  width: calc(100% - 640px);
+}
+
+
+th {
+    background: #ccc;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background: #efefef;
+}
+
+tr:hover {
+  background: #d1d1d1;
+}
+
+.searchBox{
+  width: 300px;
+  height: 250px;
+}
+
+.ch_box{
+  width: 1280px;
+}
+
+.ch_title{
+  width: 250px;
+}
+
+.ch_url{
+  width: 500px;
+}
+
+.ch_view{
+  width: 50px;
+}
+
+.ch_like{
+  width: 50px;
+}
+
+.ch_detail{
+  width: 50px;
+}
+
+
