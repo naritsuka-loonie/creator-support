@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body>
+        <h1><%= title %></h1>
+        <p><%= title %></p>
+	<div class= "mainArea">
+            <div class="youtubeArea" >
+                <ul>
+                    <a class="link" href="/getapi">
+                        youtubeの動画を調査する<br>
+                        チャンネル登録者 
+		    </a>
+		</ul>
+            </div>
+            <ul>
+                <a class="link" href="/getapi">
+                    声真似を練習する
+                </a>
+            </ul>
+        </div>
+    </body>
+    <%- include("./common_layout/footer.ejs")%>
+</html>

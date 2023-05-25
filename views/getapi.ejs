@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="js">
+    <head>
+        <meta http-equiv="content-type"
+            content="text/html"; charset="UTF-8" />
+        <title><%= title %></title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body class="mainArea">
+        <head>
+            <h1><%= title %></h1>
+        </head>
+        <div class="searchArea">
+	    <form method="post" action="/getapi/post" >
+                <div class="key">
+	            <p>検索ワード</p>
+                    <input type="text" name="searchMsg" value=<%= input.inputSearch %> >
+                </div>
+                <div class="text" >　
+                    <p>チェンネル登録者数</p>
+		    <input type="text" name="regNum" value=<%= input.inputRegNum %>> 人
+		    <input type="radio" name="regNumFlag" value="up">以上
+                    <input type="radio" name="regNumFlag" value="down" checked >以下
+                </div>
+                <div class="text" >　
+                    <p>再生回数</p>
+		    <input type="text" name="viewCnt" value=<%= input.inputViewCnt %> > 人以上
+                </div>
+                <div class="searchDate"><F12>
+                     <p>対象期間</p>
+		    <input type="date" name="dateFrom" value=<%= input.inputDateFrom %> >～
+		    <input type="date" name="dateTo" value=<%= input.inputDateTo %> >
+                </div>
+		<input type="submit" value="検索" >
+            </form>
+        </div>
+        <div class="listArea">
+            <% if( input.checkFlag  === 'true' ){ %>
+                <table class="my_table">
+                    <tr>
+                        <th class="ch_title" >チェンネル名</th>
+                        <th class="ch_subscrib" >チャンネル登録者数</th>
+                        <th class="ch_url" >タイトル</th>
+                        <th class="ch_view" >再生数</th>
+                        <th class="ch_like" >いいね</th>
+                    </tr>
+                    <% for(var i=0; i < items.length; i++) { %>
+                        <tr>
+                            <td><%= items[i].youtube_ch_title %></td>
+                            <td><%= items[i].youtube_subscrib %></td>
+                            <td><a href="<%= items[i].youtube_url %>"><%= items[i].youtube_title %></td>
+                            <td><%= items[i].youtube_view %></td>
+                            <td><%= items[i].youtube_like %></td>
+                        </tr>
+                    <% } %>
+                </table>
+		<div class="resultNum" >
+		    <p>取得件数はXX件です。</p>
+		</div>
+<!-- 後で実装
+                <div class="csvArea">
+                    <form method="post" action="/csvout" >
+			<input type="hidden" name="inputData" value=<%= input %> >
+			<input type="hidden" name="record" value=<%= items %> >
+                        <input type="submit" value="csvファイルを出力" >
+	            </form>
+	        </div>
+--->
+            <% } %>
+        </div>
+    </body>
+</html>
